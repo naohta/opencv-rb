@@ -26,6 +26,8 @@ end
 show mat0
 show mat1
 
+=begin
+
 # グレースケールにして大津の二値化
 mat0, th = mat0.BGR2GRAY.threshold(0, 255, CV_THRESH_BINARY | CV_THRESH_OTSU)
 mat1, th = mat1.BGR2GRAY.threshold(0, 255, CV_THRESH_BINARY | CV_THRESH_OTSU)
@@ -37,6 +39,8 @@ mat0 = mat0.canny(50,50)
 mat1 = mat1.canny(50,50)
 show mat0
 show mat1
+
+=end
 
 p mat0.match_shapes(mat1,CV_CONTOURS_MATCH_I1)
 
